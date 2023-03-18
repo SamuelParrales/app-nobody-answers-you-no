@@ -1,0 +1,33 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-box
+{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+.options
+{
+    display: flex;
+    justify-content: center;
+}
+
+.no
+{
+    position: relative;
+    top: 0px;
+}

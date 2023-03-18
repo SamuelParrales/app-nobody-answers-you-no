@@ -1,0 +1,49 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Copy text */
+
+.form-copy-text {
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    padding: 10px
+}
+
+.copy-text-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+.copy-text-header span
+{
+    padding: 4px;
+}
+.form-copy-text input[type=text] {
+    
+    padding: 5px;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+}
+
+
+.span-copied
+{
+    position:relative;
+    display: inline-block;
+    border: 1px solid #afafaf;
+    border-radius: 15px;
+    
+    background-color: #5282BF;
+    color: #fff;
+    display: none;
+
+}
+.span-copied.active
+{
+    display: block;
+}
