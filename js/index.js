@@ -2,6 +2,9 @@ const $generatorForm = document.getElementById('generator-form');
 const $copyText = document.querySelector('.copy-text');
 const $formCopyText = document.getElementById('form-copy-text');
 
+
+
+
 const onChangeInputForm =function(e)
 {
     const $spanCopied = $copyText.querySelector('.span-copied');
@@ -14,15 +17,17 @@ const onChangeInputForm =function(e)
 }
 const onGenerateLink = function(e){
     e.preventDefault();
-    const $btnCopied = $copyText.querySelector('.btn-copied');
-    const question = this.question.value,
-    answer = this.answer.value,
+    const $btnCopied = $copyText.querySelector('.btn-copied'),
     searchParams = new URLSearchParams();
+
+    let question = this.question.value;
+    answer = this.answer.value;
     searchParams.append('question',question);
     searchParams.append('answer',answer);
-    const link = `${location.origin}/dialog-box.html?${searchParams.toString()}`
+    link= `${location.href}/dialog-box.html?${searchParams.toString()}`
+    
+    
     $formCopyText.link.value =link;
-
     $btnCopied.disabled = false;
 }
 const onCopyLink = function(e)
@@ -35,6 +40,8 @@ const onCopyLink = function(e)
     document.execCommand('copy');
     $spanCopied.classList.add('active')
 }
+
+
 
 
 // Events
